@@ -29,9 +29,14 @@ export const navItems = [
     icon: 'icon-puzzle'
   },
   {
+    name: 'Subscribers',
+    url: '/subscribers',
+    icon: 'icon-puzzle'
+  },
+  {
     name: 'Posts',
     url: '/posts',
-    icon: 'icon-puzzle',
+    icon: 'icon-email',
     children: [
       {
         name: 'Category',

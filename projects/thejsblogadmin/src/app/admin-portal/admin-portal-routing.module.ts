@@ -38,6 +38,11 @@ const routes: Routes = [{
     path: 'posts',
     data: { title: 'Posts' },
     loadChildren: './posts/posts.module#PostsModule'
+  },
+  {
+    path: 'subscribers',
+    data: { title: 'Subscribers' },
+    loadChildren: './subscribers/subscribers.module#SubscribersModule'
   }]
 }];
 
