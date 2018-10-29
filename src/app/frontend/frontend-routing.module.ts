@@ -8,7 +8,7 @@ const routes: Routes = [{
   path: '',
   component: FrontendComponent,
   children: [{
-    path: 'post',
+    path: 'post/:slug',
     component: PostComponent
   }]
 }];

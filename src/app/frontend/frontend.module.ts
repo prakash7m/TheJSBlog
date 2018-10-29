@@ -21,6 +21,9 @@ import { PostsHomeContainerComponent } from './posts-home-container/posts-home-c
 import { PostContainerComponent } from './post-container/post-container.component';
 import { ArticleService } from './article/article.service';
 import { FrontendComponent } from './frontend.component';
+import { PostsService } from './posts.service';
+import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
+import { GlobalErrorHandler } from 'projects/thejsblogadmin/src/app/admin-portal/core/global-error-handler';
 
 
 @NgModule({
@@ -28,6 +31,7 @@ import { FrontendComponent } from './frontend.component';
     CommonModule,
     FrontendRoutingModule,
     HttpModule,
+    HttpClientModule,
     MarkdownModule.forRoot()
   ],
   declarations: [
@@ -49,7 +53,10 @@ import { FrontendComponent } from './frontend.component';
     FrontendComponent
   ],
   providers: [
-    ArticleService
+    ArticleService,
+    PostsService,
+    HttpClient,
+    GlobalErrorHandler
   ]
 })
 export class FrontendModule { }

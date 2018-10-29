@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { NgModule, ErrorHandler } from '@angular/core';
+import { NgModule, PLATFORM_ID, APP_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { MarkdownModule } from 'ngx-markdown';
 import { HttpModule } from '@angular/http';
 import { StoreModule } from '@ngrx/store';
@@ -17,7 +18,7 @@ import { SharedModule } from './shared/shared.module';
   imports: [
     BrowserAnimationsModule,
     SharedModule,
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'the-js-blog' }),
     AppRoutingModule,
     HttpModule,
     MarkdownModule.forRoot(),
@@ -26,4 +27,12 @@ import { SharedModule } from './shared/shared.module';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    @Inject(APP_ID) private appId: string) {
+    const platform = isPlatformBrowser(platformId) ?
+      'in the browser' : 'on the server';
+    console.log(`Running ${platform} with appId=${appId}`);
+  }
+}
