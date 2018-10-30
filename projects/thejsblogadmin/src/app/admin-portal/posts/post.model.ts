@@ -2,7 +2,7 @@ import { GalleryModel } from '../gallery/gallery.model';
 import { CategoryModel } from '../categories/category.model';
 import { UserModel } from '../core/user.model';
 
-export interface PostModel {
+export class PostModel {
   _id?: string;
   title: string;
   synopsis: string;

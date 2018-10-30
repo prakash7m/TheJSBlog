@@ -18,7 +18,7 @@ export class PostsService {
    * @memberof PostsService
    */
   getLatestPosts(): Observable<RowsResponse<PostModel> | HandledErrorResponse> {
-    return this.http.get<RowsResponse<PostModel>>(`${apiURL}/post`, { withCredentials: true }).pipe(
+    return this.http.get<RowsResponse<PostModel>>(`${apiURL}/get/post/latest`).pipe(
       map((res: RowsResponse<PostModel>) => res))
       .catch((err: any, caught: Observable<RowsResponse<PostModel>>) => {
         return this.globalErrorHandler.handleError(err);
@@ -26,7 +26,7 @@ export class PostsService {
   }
 
   getPost(slug: string): Observable<DataResponse<PostModel> | HandledErrorResponse> {
-    return this.http.get<DataResponse<PostModel>>(`${apiURL}/post/${slug}`, { withCredentials: true }).pipe(
+    return this.http.get<DataResponse<PostModel>>(`${apiURL}/get/post/${slug}`).pipe(
       map((res: DataResponse<PostModel>) => res))
       .catch((err: any, caught: Observable<DataResponse<PostModel>>) => {
         return this.globalErrorHandler.handleError(err);

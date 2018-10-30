@@ -24,6 +24,7 @@ import { FrontendComponent } from './frontend.component';
 import { PostsService } from './posts.service';
 import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
 import { GlobalErrorHandler } from 'projects/thejsblogadmin/src/app/admin-portal/core/global-error-handler';
+import { LoadingComponent } from './loading/loading.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { GlobalErrorHandler } from 'projects/thejsblogadmin/src/app/admin-portal
     PostsHomeComponent,
     PostsHomeContainerComponent,
     PostContainerComponent,
-    FrontendComponent
+    FrontendComponent,
+    LoadingComponent
   ],
   providers: [
     ArticleService,

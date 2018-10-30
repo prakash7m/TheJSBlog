@@ -16,7 +16,6 @@ export class PostTilesComponent implements OnInit {
   ngOnInit() {
     this.postsService.getLatestPosts().subscribe((res: RowsResponse<PostModel>) => {
       this.posts = res.rows;
-      console.log(this.posts);
     });
   }
 

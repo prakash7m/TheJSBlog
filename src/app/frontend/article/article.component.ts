@@ -14,12 +14,13 @@ import { DataResponse } from 'projects/thejsblogadmin/src/app/admin-portal/core/
 })
 export class ArticleComponent implements OnInit {
   constructor(private route: ActivatedRoute, private postsService: PostsService) { }
-  article: PostModel;
+  article: PostModel = new PostModel();
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.postsService.getPost(params.slug).subscribe((res: DataResponse<PostModel>) => {
         this.article = res.data;
+        window.scrollTo(0, 0);
       });
     });
   }
