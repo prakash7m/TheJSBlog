@@ -3,6 +3,7 @@ import { PostModel } from 'projects/thejsblogadmin/src/app/admin-portal/posts/po
 import { Observable } from 'rxjs';
 import { RowsResponse, HandledErrorResponse } from 'projects/thejsblogadmin/src/app/admin-portal/core/response.model';
 import { PostsService } from '../posts.service';
+import { mediaURL } from 'projects/thejsblogadmin/src/app/admin-portal/config';
 
 @Component({
   selector: 'b-post-tiles',
@@ -19,4 +20,11 @@ export class PostTilesComponent implements OnInit {
     });
   }
 
+  getHeroLink(post: PostModel) {
+    if (post.hero) {
+      return `${mediaURL}/${post.hero.filename}`;
+    } else {
+      return 'default';
+    }
+  }
 }

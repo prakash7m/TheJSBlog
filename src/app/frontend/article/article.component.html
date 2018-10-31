@@ -1,24 +1,29 @@
-<!-- Title -->
-<h1 class="mt-4">{{article.title}}</h1>
-<!-- Author -->
-<p class="lead">by <a href="#">Start Bootstrap</a></p>
+<div class="" *ngIf="article; else loading">
+  <!-- Title -->
+  <h1 class="mt-4">{{article.title}}</h1>
+  <!-- Author -->
+  <p class="lead"><span *ngFor="let cat of article.category" class="badge badge-secondary badge-pill"  style="font-weight: normal; margin-right: 3px;">{{cat.name}}</span></p>
 
-<hr>
+  <hr>
 
-<!-- Date/Time -->
-<p>Posted on {{article.created}} <span style="float: right">Read time: {{article.readtime}} min.</span></p>
+  <!-- Date/Time -->
+  <p style="display: flex; justify-content: space-between"><span><i class="fa fa-calendar"></i> Posted on {{article.created | date: 'mediumDate'}}</span> <span><i class="fa fa-clock-o"></i> {{article.readtime}} min read.</span></p>
 
-<hr>
+  <hr>
+  <p class="lead">{{article.synopsis}}</p>  
+  <!-- Preview Image -->
+  <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
 
-<!-- Preview Image -->
-<img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+  <hr>
 
-<hr>
-
-<!-- Post Content -->
-<p class="lead">{{article.synopsis}}</p>
-<div *ngIf="article" markdown [data]="article.content"></div>
-
+  <!-- Post Content -->
+  
+  <div *ngIf="article" markdown [data]="article.content"></div>
+</div>
+<ng-template #loading>
+  <b-article-loading></b-article-loading>
+</ng-template>
+<!--
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus
   doloremque laborum quos iste ipsum rerum obcaecati
   impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus,
@@ -47,7 +52,6 @@
 
 <hr>
 
-<!-- Comments Form -->
 <div class="card my-4">
   <h5 class="card-header">Leave a Comment:</h5>
   <div class="card-body">
@@ -60,7 +64,6 @@
   </div>
 </div>
 
-<!-- Single Comment -->
 <div class="media mb-4">
   <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50"
     alt="">
@@ -74,7 +77,6 @@
   </div>
 </div>
 
-<!-- Comment with nested comments -->
 <div class="media mb-4">
   <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50"
     alt="">
@@ -114,3 +116,4 @@
 
   </div>
 </div>
+  -->

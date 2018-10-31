@@ -16,6 +16,7 @@ import { PostsComponent } from './posts.component';
 import { PostsEffect } from './store/posts.effects';
 import { postsReducer } from './store/posts.reducer';
 import { CategoriesModule } from '../categories/categories.module';
+import { GalleryModule } from '../gallery/gallery.module';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { CategoriesModule } from '../categories/categories.module';
     EffectsModule.forFeature([PostsEffect]),
     NgSelectModule,
     CategoriesModule,
+    GalleryModule,
     CovalentTextEditorModule
   ],
   providers: [PostsService, {

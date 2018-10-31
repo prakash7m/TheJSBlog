@@ -80,7 +80,7 @@ export class GalleryEffect {
           this.store.dispatch(new GalleryError(err, REQUEST_CREATE_GALLERY));
           return of();
         });
-    })); 
+    }));
 
   @Effect()
   $requestEditGalleryEffect = this.actions$

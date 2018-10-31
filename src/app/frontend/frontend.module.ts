@@ -25,6 +25,8 @@ import { PostsService } from './posts.service';
 import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
 import { GlobalErrorHandler } from 'projects/thejsblogadmin/src/app/admin-portal/core/global-error-handler';
 import { LoadingComponent } from './loading/loading.component';
+import { PostTilesLoadingComponent } from './post-tiles/post-tiles-loading.component';
+import { ArticleLoadingComponent } from './article/article-loading.component';
 
 
 @NgModule({
@@ -42,6 +44,7 @@ import { LoadingComponent } from './loading/loading.component';
     FooterComponent,
     SubscribeComponent,
     PostTilesComponent,
+    PostTilesLoadingComponent,
     CategoryHeroComponent,
     ContainerWithSidebarComponent,
     ArticleComponent,
@@ -52,7 +55,8 @@ import { LoadingComponent } from './loading/loading.component';
     PostsHomeContainerComponent,
     PostContainerComponent,
     FrontendComponent,
-    LoadingComponent
+    LoadingComponent,
+    ArticleLoadingComponent
   ],
   providers: [
     ArticleService,

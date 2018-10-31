@@ -31,6 +31,13 @@
         <small class="form-text v-error" *ngIf="isFieldInvalid('category')">Please input a valid category</small>
       </div>
       <div class="form-group">
+        <label for="hero">Hero</label>
+        <ng-select [items]="(mediaState$ | async).galleryList" [loading]="mediaBusy$ | async" bindValue="_id"
+          bindLabel="name" [multiple]="false" [searchable]="true" formControlName="hero">
+        </ng-select>
+        <small class="form-text v-error" *ngIf="isFieldInvalid('hero')">Please input a valid hero</small>
+      </div>
+      <div class="form-group">
         <label for="content">Content</label>
         <td-text-editor [value]="content" [options]="contentEditorOptions" #textEditor></td-text-editor>
       </div>

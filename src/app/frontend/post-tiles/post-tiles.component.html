@@ -7,8 +7,8 @@
     <div class="row" *ngIf="posts; else loading">
       <div class="post col-lg-4 col-sm-6" *ngFor="let post of posts">
         <div class="post-thumbnail">
-          <a routerLink="/post/{{post.slug}}">
-            <img src="https://d19m59y37dris4.cloudfront.net/blog/1-2/img/blog-1.jpg" alt="..." class="img-fluid">
+          <a routerLink="/post/{{post.slug}}" [style.backgroundImage]="'url(' + getHeroLink(post) + ')'"  >
+            
           </a>
         </div>
         <div class="post-details">
@@ -22,7 +22,7 @@
       </div>
     </div>
     <ng-template #loading>
-      <b-loading></b-loading>
+      <b-post-tiles-loading></b-post-tiles-loading>
     </ng-template>
     
   </div>

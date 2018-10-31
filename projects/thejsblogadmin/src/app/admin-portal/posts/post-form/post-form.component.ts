@@ -16,6 +16,7 @@ import { FormBase } from '../../core/form.base';
 import { StateHelper } from '../../core/state.helper';
 import { RequestLoadCategories, REQUEST_LOAD_CATEGORIES } from '../../categories/store/categories.actions';
 import { TdTextEditorComponent } from '@covalent/text-editor';
+import { REQUEST_LOAD_GALLERY, RequestLoadGallery } from '../../gallery/store/gallery.actions';
 
 
 @Component({
@@ -37,6 +38,10 @@ export class PostFormComponent extends FormBase<PostModel> implements OnInit {
 
   categoriesState$ = StateHelper.stateForFeature(this.store, 'categoriesFeature', 'categories');
   categoriesBusy$: Observable<boolean> = StateHelper.progressFor(this.categoriesState$, [REQUEST_LOAD_CATEGORIES]);
+
+  mediaState$ = StateHelper.stateForFeature(this.store, 'galleryFeature', 'gallery');
+  mediaBusy$: Observable<boolean> = StateHelper.progressFor(this.mediaState$, [REQUEST_LOAD_GALLERY]);
+
   contentEditorOptions: any = {
     lineWrapping: true
   };
@@ -50,6 +55,7 @@ export class PostFormComponent extends FormBase<PostModel> implements OnInit {
   rows = [{name: 'One Option', _id: '233'}, {name: 'Another Option', _id: '233'}];
   ngOnInit() {
     super.ngOnInit();
+    this.store.dispatch(new RequestLoadGallery());
     this.store.dispatch(new RequestLoadCategories());
   }
 

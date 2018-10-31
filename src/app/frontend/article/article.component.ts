@@ -14,7 +14,7 @@ import { DataResponse } from 'projects/thejsblogadmin/src/app/admin-portal/core/
 })
 export class ArticleComponent implements OnInit {
   constructor(private route: ActivatedRoute, private postsService: PostsService) { }
-  article: PostModel = new PostModel();
+  article: PostModel;
 
   ngOnInit() {
     this.route.params.subscribe(params => {
