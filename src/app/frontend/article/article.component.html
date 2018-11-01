@@ -2,7 +2,7 @@
   <!-- Title -->
   <h1 class="mt-4">{{article.title}}</h1>
   <!-- Author -->
-  <p class="lead"><span *ngFor="let cat of article.category" class="badge badge-secondary badge-pill"  style="font-weight: normal; margin-right: 3px;">{{cat.name}}</span></p>
+  <p class="lead"><span *ngFor="let cat of article.category" class="badge badge-tags badge-pill">{{cat.name}}</span></p>
 
   <hr>
 
@@ -12,13 +12,13 @@
   <hr>
   <p class="lead">{{article.synopsis}}</p>  
   <!-- Preview Image -->
-  <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+  <img class="img-fluid rounded" src="{{this.getHeroLink(article)}}" alt="">
 
   <hr>
 
   <!-- Post Content -->
   
-  <div *ngIf="article" markdown [data]="article.content"></div>
+  <div class="article-section" *ngIf="article" markdown [data]="article.content"></div>
 </div>
 <ng-template #loading>
   <b-article-loading></b-article-loading>

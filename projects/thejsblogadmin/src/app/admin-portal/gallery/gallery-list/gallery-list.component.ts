@@ -22,6 +22,7 @@ export class GalleryListComponent extends DataGridClass<any> implements OnInit {
   busyMessages: {[key: string]: string} = {
     [REQUEST_LOAD_GALLERY]: 'Loading gallery'
   };
+  editVisible: string;
   constructor(private usersService: GalleryService, private store: Store<any>) {
     super();
     this.featureState$.subscribe((gallery) => {

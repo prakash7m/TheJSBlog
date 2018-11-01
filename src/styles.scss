@@ -165,3 +165,26 @@ a:not([href]):not([tabindex]) {
 .btn {
   margin-right: 10px;
 }
+
+
+.cover-image {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  display: block;
+}
+
+.badge-tags {
+  color: #666;
+  background-color: #eee;
+  font-size: 14px;
+  font-weight: normal;
+  margin-right: 3px;
+}
+
+.article-section p {
+  font-size: 20px !important;
+  font-weight: 300 !important;
+  font-family: lato !important;
+}
+

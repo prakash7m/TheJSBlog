@@ -7,17 +7,17 @@
     <div class="row" *ngIf="posts; else loading">
       <div class="post col-lg-4 col-sm-6" *ngFor="let post of posts">
         <div class="post-thumbnail">
-          <a routerLink="/post/{{post.slug}}" [style.backgroundImage]="'url(' + getHeroLink(post) + ')'"  >
+          <a routerLink="/post/{{post.slug}}" class="cover-image" [style.backgroundImage]="'url(' + getHeroLink(post) + ')'"  >
             
           </a>
         </div>
         <div class="post-details">
           <div class="post-meta d-flex justify-content-between">
-            <div class="date">{{post.created}}</div>
-            <div class="category"><a href="#">Business</a></div>
+            <div class="date">{{post.created | date: 'mediumDate'}}</div>
+            <div *ngIf="post.category[0]" class="category"><a routerLink="/category/{{post.category[0]._id}}">{{post.category[0]?.name}}</a></div>
           </div><a routerLink="/post/{{post.slug}}">
             <h3>{{post.title}}</h3></a>
-          <p class="text-muted">{{post.synopsis}}</p>
+          <p class="text-muted">{{post.synopsis.length > 100 ? (post.synopsis | slice:0:100) + "..." : post.synopsis}}</p>
         </div>
       </div>
     </div>

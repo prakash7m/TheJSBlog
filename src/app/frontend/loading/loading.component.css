@@ -21,6 +21,10 @@
     overflow: hidden;
 }
 
+.loading-container {
+    margin-bottom: 100px;
+}
+
 .loading-header {
     width: 50%;
     height: 30px;

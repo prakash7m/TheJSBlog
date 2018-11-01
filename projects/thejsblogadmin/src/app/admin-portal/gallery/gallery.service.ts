@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { RowsResponse, HandledErrorResponse, DataResponse } from '../core/response.model';
 import { GalleryModel } from './gallery.model';
 import { apiURL } from '../config';
+import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class GalleryService {

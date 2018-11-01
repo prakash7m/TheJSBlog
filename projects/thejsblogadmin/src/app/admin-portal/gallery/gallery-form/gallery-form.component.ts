@@ -35,6 +35,7 @@ export class GalleryFormComponent implements OnInit {
   }
 
   uploadFiles(files: File[]): Subscription {
+    console.log(this.sendableFormData);
     this.httpEmitter = this.galleryService.upload(this.sendableFormData)
       .subscribe((event: HttpEvent<{}>) => {
         this.httpEvent = event;

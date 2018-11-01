@@ -1,11 +1,12 @@
 import { map } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { GlobalErrorHandler } from 'projects/thejsblogadmin/src/app/admin-portal/core/global-error-handler';
+import { GlobalErrorHandler } from '../../../projects/thejsblogadmin/src/app/admin-portal/core/global-error-handler';
 import { Observable } from 'rxjs/Observable';
-import { RowsResponse, HandledErrorResponse, DataResponse } from 'projects/thejsblogadmin/src/app/admin-portal/core/response.model';
-import { apiURL } from 'projects/thejsblogadmin/src/app/admin-portal/config';
-import { PostModel } from 'projects/thejsblogadmin/src/app/admin-portal/posts/post.model';
+import { RowsResponse,
+  HandledErrorResponse, DataResponse } from '../../../projects/thejsblogadmin/src/app/admin-portal/core/response.model';
+import { apiURL } from '../../../projects/thejsblogadmin/src/app/admin-portal/config';
+import { PostModel } from '../../../projects/thejsblogadmin/src/app/admin-portal/posts/post.model';
 import 'rxjs/add/operator/catch';
 
 @Injectable()

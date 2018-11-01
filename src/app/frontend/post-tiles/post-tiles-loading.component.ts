@@ -1,17 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { PostModel } from 'projects/thejsblogadmin/src/app/admin-portal/posts/post.model';
-import { Observable } from 'rxjs';
-import { RowsResponse, HandledErrorResponse } from 'projects/thejsblogadmin/src/app/admin-portal/core/response.model';
-import { PostsService } from '../posts.service';
 import { LoadingComponent } from '../loading/loading.component';
 
 @Component({
   selector: 'b-post-tiles-loading',
   template: `
-    <div class="row">
+    <div class="row loading-container">
       <div *ngFor="let i of items" class="post col-lg-4 col-sm-6">
         <div class="post-thumbnail">
-          <a style="width: 100%; height: 200px; margin-bottom: 0px; display: inline-block" class="linear-background">
+          <a style="width: 100%; height: 150px; margin-bottom: 0px; display: inline-block" class="linear-background">
           &nbsp;
           </a>
         </div>

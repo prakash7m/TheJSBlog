@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PostModel } from 'projects/thejsblogadmin/src/app/admin-portal/posts/post.model';
-import { Observable } from 'rxjs';
-import { RowsResponse, HandledErrorResponse } from 'projects/thejsblogadmin/src/app/admin-portal/core/response.model';
+import { PostModel } from '../../../../projects/thejsblogadmin/src/app/admin-portal/posts/post.model';
+import { RowsResponse, HandledErrorResponse } from '../../../../projects/thejsblogadmin/src/app/admin-portal/core/response.model';
 import { PostsService } from '../posts.service';
-import { mediaURL } from 'projects/thejsblogadmin/src/app/admin-portal/config';
+import { mediaURL } from '../../../../projects/thejsblogadmin/src/app/admin-portal/config';
 
 @Component({
   selector: 'b-post-tiles',

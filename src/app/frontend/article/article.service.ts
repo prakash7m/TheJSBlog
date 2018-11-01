@@ -9,6 +9,6 @@ export class ArticleService {
     constructor (private http: Http) { }
     getArticle () {
         return this.http.get('/assets/mock/article.md').pipe(
-            map(article => article.text()));
+            map(article => article.text())).toPromise();
     }
 }
