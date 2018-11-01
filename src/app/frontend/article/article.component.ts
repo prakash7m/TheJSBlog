@@ -18,12 +18,11 @@ export class ArticleComponent implements OnInit {
   article: PostModel;
 
   ngOnInit() {
-    // this.route.params.subscribe(params => {
-      
-    // });
-    this.postsService.getPost('post/js-functions').then((res: DataResponse<PostModel>) => {
-      this.article = res.data;
-      window.scrollTo(0, 0);
+    this.route.params.subscribe(params => {
+      this.postsService.getPost(params.slug).subscribe((res: DataResponse<PostModel>) => {
+        this.article = res.data;
+        window.scrollTo(0, 0);
+      });
     });
   }
 
