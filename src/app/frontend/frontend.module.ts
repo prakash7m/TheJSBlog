@@ -27,6 +27,7 @@ import { GlobalErrorHandler } from '../../../projects/thejsblogadmin/src/app/adm
 import { LoadingComponent } from './loading/loading.component';
 import { PostTilesLoadingComponent } from './post-tiles/post-tiles-loading.component';
 import { ArticleLoadingComponent } from './article/article-loading.component';
+import { FormsModule, ReactiveFormsModule } from '../../../node_modules/@angular/forms';
 
 
 @NgModule({
@@ -35,7 +36,9 @@ import { ArticleLoadingComponent } from './article/article-loading.component';
     FrontendRoutingModule,
     HttpModule,
     HttpClientModule,
-    MarkdownModule.forRoot()
+    MarkdownModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     HeaderComponent,

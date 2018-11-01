@@ -3,8 +3,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { GlobalErrorHandler } from '../../../projects/thejsblogadmin/src/app/admin-portal/core/global-error-handler';
 import { Observable } from 'rxjs/Observable';
-import { RowsResponse,
-  HandledErrorResponse, DataResponse } from '../../../projects/thejsblogadmin/src/app/admin-portal/core/response.model';
+import {
+  RowsResponse,
+  HandledErrorResponse, DataResponse
+} from '../../../projects/thejsblogadmin/src/app/admin-portal/core/response.model';
 import { apiURL } from '../../../projects/thejsblogadmin/src/app/admin-portal/config';
 import { PostModel } from '../../../projects/thejsblogadmin/src/app/admin-portal/posts/post.model';
 import 'rxjs/add/operator/catch';
@@ -30,6 +32,14 @@ export class PostsService {
     return this.http.get<DataResponse<PostModel>>(`${apiURL}/get/post/${slug}`).pipe(
       map((res: DataResponse<PostModel>) => res))
       .catch((err: any, caught: Observable<DataResponse<PostModel>>) => {
+        return this.globalErrorHandler.handleError(err);
+      });
+  }
+
+  subscribe(email: string): Observable<DataResponse<any> | HandledErrorResponse> {
+    return this.http.post<DataResponse<any>>(`${apiURL}/get/subscribe`, { email }).pipe(
+      map((res: DataResponse<any>) => res))
+      .catch((err: any, caught: Observable<DataResponse<any>>) => {
         return this.globalErrorHandler.handleError(err);
       });
   }

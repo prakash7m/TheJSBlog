@@ -2,12 +2,15 @@
   <div class="container">
     <h1>Subscribe</h1>
     <p class="lead text-muted">Get the posts at it's latest by subscribing to our mailing list. Your email will only be used to send you post updates and will not be disclosed to any third parties. It is our privacy policy and promise.</p>
-    <form class="form-inline" style="justify-content: center">
-        <div class="form-group mb-2">
-          <input type="email" class="form-control" id="subscribe-email" autocomplete="new-password" placeholder="Enter email" style="max-width:200px; margin-right: 10px;">
-          
-        </div>
-        <button type="submit" class="btn btn-primary  mb-2">Subscribe</button>
-      </form>
+    <form class="form-inline" style="justify-content: center" [formGroup]="formGroup"  (ngSubmit)="submitForm()" *ngIf="!message; else message">
+      <div class="form-group mb-2">
+        <input type="email" class="form-control" id="subscribe-email" autocomplete="new-password" formControlName="email" placeholder="Your email" style="max-width:200px; margin-right: 10px;">        
+      </div>
+      <button type="submit" class="btn btn-primary  mb-2">Subscribe</button>
+    </form>
+    <small class="form-text v-error" style="color: #fff" *ngIf="isFieldInvalid('email')">Please input a valid email</small>
+    <ng-template>
+      <div #message>{{message}}</div>
+    </ng-template>
   </div>
 </section>
