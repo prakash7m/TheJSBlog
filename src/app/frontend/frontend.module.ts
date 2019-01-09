@@ -28,6 +28,7 @@ import { LoadingComponent } from './loading/loading.component';
 import { PostTilesLoadingComponent } from './post-tiles/post-tiles-loading.component';
 import { ArticleLoadingComponent } from './article/article-loading.component';
 import { ShareButtonsModule } from '@ngx-share/buttons';
+import { FormsModule, ReactiveFormsModule } from '../../../node_modules/@angular/forms';
 
 
 @NgModule({
@@ -37,7 +38,9 @@ import { ShareButtonsModule } from '@ngx-share/buttons';
     HttpModule,
     HttpClientModule,
     MarkdownModule.forRoot(),
-    ShareButtonsModule
+    ShareButtonsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [
     HeaderComponent,
