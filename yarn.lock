@@ -110,6 +110,15 @@
   dependencies:
     tslib "^1.9.0"
 
+"@angular/cdk@^7.2.1":
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-7.2.1.tgz#f3673d026a0a38f93629bbd67039bbbb50a36f1c"
+  integrity sha512-oU1Pjq3JkDtkXquLxWK84A2jOCeYRf352dVGbQCxWoSOQ5KBtMAd42huGidPiOSHN6/f7xZwL3n4fq3fVIut8A==
+  dependencies:
+    tslib "^1.7.1"
+  optionalDependencies:
+    parse5 "^5.0.0"
+
 "@angular/cli@~6.2.4":
   version "6.2.4"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-6.2.4.tgz#e292a5e4d3184a40caec0337d8bc3cd597c5f292"
@@ -328,6 +337,39 @@
     simplemde "^1.11.2"
     tslib "^1.9.0"
 
+"@fortawesome/angular-fontawesome@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/angular-fontawesome/-/angular-fontawesome-0.3.0.tgz#380492f186469ce03d6fdbb3ec719810f771bf62"
+  integrity sha512-wXvyPI7GidoNiqeMz2re9iemUMFH4zBmuv94CfXlaanQ8+kMP/fYs/k69PLVN1KsebQY4kRA9GHmc1U1ndBkJg==
+  dependencies:
+    tslib "^1.9.0"
+
+"@fortawesome/fontawesome-common-types@^0.2.12":
+  version "0.2.12"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.12.tgz#42baa71f97ca06faeb0b6718fa5ed20c5eefdf07"
+  integrity sha512-ISLNpEx6fhJTYYkvBeo/4DHeL5EIA+VybJoOOnH67m6uXt6V6VFizdEN4qchHagNIeZfzI0LnA22gk0wbVPv/g==
+
+"@fortawesome/fontawesome-svg-core@^1.2.12":
+  version "1.2.12"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.12.tgz#9732617b1e484435f6946645d7f9ad248f12c437"
+  integrity sha512-cqTfa3vZ+Z9UYQnmLfCOwyLnf0Xcoxkmm/BSaI29Yikzu9zIeD4es7lBZMDqLOXYSEQC+rCr8caxFlGJcJVA+w==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.12"
+
+"@fortawesome/free-brands-svg-icons@^5.6.3":
+  version "5.6.3"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-5.6.3.tgz#f4ac2abab83822b341b3b7257c38b9da12ca7395"
+  integrity sha512-VCPYnISsTQwYXavO6ajFuYvedqMXk9njEaNrHcvUWhal1XTQNLrwIBjyM/IMGkn06XbGL6ApPg78vh1tIfA5GA==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.12"
+
+"@fortawesome/free-solid-svg-icons@^5.6.3":
+  version "5.6.3"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.6.3.tgz#1d7f6669ccd6a1ea673699e41f7e32c81401a260"
+  integrity sha512-ld8Gfp1KrncOpFRheThUDlD6/Ro9ZJGqfCEMXlO/x1Cg7ltLc5iYDG7yxDowLcmFY2BGSmxIIU3ZMW5FVTrfwQ==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.12"
+
 "@ng-select/ng-select@^2.9.1":
   version "2.10.1"
   resolved "https://registry.yarnpkg.com/@ng-select/ng-select/-/ng-select-2.10.1.tgz#caadf53016eb010c167d57407b27a741c9b001ae"
@@ -364,6 +406,27 @@
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/@nguniversal/module-map-ngfactory-loader/-/module-map-ngfactory-loader-6.1.0.tgz#49eb65ed4dc3a3273c920b905e0925e0ed2fbcb8"
   integrity sha512-frEJmD1sUje8zKiY3ClioWGMnp9qK/SSLITTQHpKjhqatBsOPxOrJ60vu4Dv0G0zcqc+SesxuOjQ9svCYa5FVA==
+
+"@ngx-share/button@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@ngx-share/button/-/button-7.1.1.tgz#dba4b39fe1bb603845872ad0428d9afebfc651dc"
+  integrity sha512-RgA5a1v0j1SppYS1SV5y73pxx1QLRAwdaqrHtIujgN7YJbgaVEZ0dUmRHPBhoDNny43bykMIdcndl0SRDa3COA==
+  dependencies:
+    tslib "^1.9.0"
+
+"@ngx-share/buttons@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@ngx-share/buttons/-/buttons-7.1.1.tgz#e7da77df57fa79c8b70e5415859f713b1c12798e"
+  integrity sha512-uCw7w38eIIb0QjZYHZg3Bjo4GR6HwCz2e/AHyTvri+iSNEnVXQGKCAISlv/yqcOUjFq53mKbcOdUVI196kg/rQ==
+  dependencies:
+    tslib "^1.9.0"
+
+"@ngx-share/core@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@ngx-share/core/-/core-7.1.1.tgz#20acdc7bfe44d19e0ecdbce26ad042db51409893"
+  integrity sha512-W5bF2jdsGUCw03U4dn6zr5YeE0TI73k3O0k8opvbCtyK5zwNvtCGu/JQZbPNBk0dHgDNJRBOB8ar47QSxCpmEA==
+  dependencies:
+    tslib "^1.9.0"
 
 "@schematics/angular@0.8.4":
   version "0.8.4"
@@ -5614,6 +5677,11 @@ parse5@^4.0.0:
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
   integrity sha512-VrZ7eOd3T1Fk4XWNXMgiGBK/z0MG48BWG2uQNU4I72fkQuKUTZpl+u9k+CxEG0twMVzSmXEEz12z5Fnw1jIQFA==
 
+parse5@^5.0.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/parse5/-/parse5-5.1.0.tgz#c59341c9723f414c452975564c7c00a68d58acd2"
+  integrity sha512-fxNG2sQjHvlVAYmzBZS9YlDp6PTSSDwa98vkD4QgVDDCAo84z5X1t5XyJQ62ImdLXx5NdIIfihey6xpum9/gRQ==
+
 parseqs@0.0.5:
   version "0.0.5"
   resolved "https://registry.yarnpkg.com/parseqs/-/parseqs-0.0.5.tgz#d5208a3738e46766e291ba2ea173684921a8b89d"
@@ -7431,7 +7499,7 @@ tsickle@^0.32.1:
     source-map "^0.6.0"
     source-map-support "^0.5.0"
 
-tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
+tslib@^1.7.1, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
   integrity sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==

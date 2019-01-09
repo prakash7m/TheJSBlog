@@ -17,6 +17,7 @@ $fa-font-path: "./assets/fonts/FontAwesome";
 @import "../node_modules/simple-line-icons/css/simple-line-icons.css";
 
 @import "~@ng-select/ng-select/themes/default.theme.css";
+@import '~@ngx-share/button/themes/modern/modern-dark-theme';
 
 @import "styles/style";
 body {
@@ -182,9 +183,26 @@ a:not([href]):not([tabindex]) {
   margin-right: 3px;
 }
 
-.article-section p {
-  font-size: 20px !important;
-  font-weight: 300 !important;
-  font-family: lato !important;
+.article-section {
+  p, ul, li {
+    font-size: 20px !important;
+    font-weight: 300 !important;
+    font-family: lato !important;
+  }
+  ul {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  li {
+    list-style: circle;
+  }
+  pre {
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+  }
+  h1, h2, h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
 }
 

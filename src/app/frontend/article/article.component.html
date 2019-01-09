@@ -7,18 +7,38 @@
   <hr>
 
   <!-- Date/Time -->
-  <p style="display: flex; justify-content: space-between"><span><i class="fa fa-calendar"></i> Posted on {{article.created | date: 'mediumDate'}}</span> <span><i class="fa fa-clock-o"></i> {{article.readtime}} min read.</span></p>
+  <p style="display: flex; justify-content: space-between">
+    <span>
+      <i class="fa fa-calendar"></i> Posted on
+      {{article.created | date: 'mediumDate'}}
+    </span>
+    <span><i class="fa fa-clock-o"></i> {{article.readtime}} min
+      read.
+    </span>
+  </p>
 
   <hr>
-  <p class="lead">{{article.synopsis}}</p>  
+  <p class="lead">{{article.synopsis}}</p>
   <!-- Preview Image -->
   <img class="img-fluid rounded" src="{{this.getHeroLink(article)}}" alt="">
 
   <hr>
 
   <!-- Post Content -->
-  
+
   <div class="article-section" *ngIf="article" markdown [data]="article.content"></div>
+  <share-buttons [theme]="'modern-dark'"
+    [include]="['facebook','twitter','linkedin','google','whatsapp']"
+    [show]="9"
+    [showText]="true"
+    [showCount]="true"
+    [size]="-1"
+    [url]="this.getUrl(article)"
+    [title]="article.title"
+    [description]="article.synopsis"
+    [autoSetMeta]="false"
+    ></share-buttons>
+    
 </div>
 <ng-template #loading>
   <b-article-loading></b-article-loading>

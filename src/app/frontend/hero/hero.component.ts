@@ -11,7 +11,7 @@ export class HeroComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.bgImage = `url(/assets/img/covers/empty.jpg)`; // ${this.bgImages[Math.floor(Math.random() * 5)]})`;
+    this.bgImage = `url(/assets/img/covers/bubble.jpg)`; // ${this.bgImages[Math.floor(Math.random() * 5)]})`;
   }
 
 }
