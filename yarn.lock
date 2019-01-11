@@ -383,7 +383,7 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.2.12"
 
-"@ng-select/ng-select@^2.9.1":
+"@ng-select/ng-select@^2.14.0":
   version "2.14.0"
   resolved "https://registry.yarnpkg.com/@ng-select/ng-select/-/ng-select-2.14.0.tgz#6bc93f918c29aca21edbe9e04ff5f48e225e2ae6"
   integrity sha512-q5KLhF2wGbKF32oszh0//IdR9gU+ylcdwwuELkMlwwceUdZjuio5aC+7U+77NfdL6ux9/FiP1sfdHX5XPrhvew==

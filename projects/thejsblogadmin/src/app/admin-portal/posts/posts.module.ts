@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { NgSelectModule, NG_SELECT_DEFAULT_CONFIG } from '@ng-select/ng-select';
+import { NgSelectModule } from '@ng-select/ng-select';
 import { CovalentTextEditorModule } from '@covalent/text-editor';
 
 import { PostsRoutingModule } from './posts-routing.module';
@@ -36,17 +36,7 @@ import { GalleryModule } from '../gallery/gallery.module';
     GalleryModule,
     CovalentTextEditorModule
   ],
-  providers: [PostsService, {
-    provide: NG_SELECT_DEFAULT_CONFIG,
-    useValue: {
-      placeholder: 'Select item',
-      notFoundText: 'Items not found',
-      addTagText: 'Add item',
-      typeToSearchText: 'Type to search',
-      loadingText: 'Loading...',
-      clearAllText: 'Clear all'
-    }
-}],
+  providers: [PostsService],
   exports: [PostListComponent],
   declarations: [PostListComponent, PostFormComponent, PostsComponent]
 })
