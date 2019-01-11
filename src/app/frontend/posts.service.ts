@@ -43,4 +43,12 @@ export class PostsService {
         return this.globalErrorHandler.handleError(err);
       });
   }
+
+  getRelatedPosts(): Observable<RowsResponse<PostModel> | HandledErrorResponse> {
+    return this.http.get<RowsResponse<PostModel>>(`${apiURL}/get/post/related/`).pipe(
+      map((res: RowsResponse<PostModel>) => res))
+      .catch((err: any, caught: Observable<RowsResponse<PostModel>>) => {
+        return this.globalErrorHandler.handleError(err);
+      });
+  }
 }
